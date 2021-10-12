@@ -2,7 +2,7 @@ package banking;
 
 import java.util.*;
 
-public class BankingSystem extends RuntimeException{
+public class BankingSystem {
 
     static Scanner input = new Scanner(System.in);
     static Account account = new Account();
@@ -73,6 +73,9 @@ public class BankingSystem extends RuntimeException{
                     case 0:
                         System.out.println("Bye");
                         menu = false;
+                        break;
+                    default:
+                        System.out.println("There is no such option!\n");
                         break;
                 }
             } while (menu);

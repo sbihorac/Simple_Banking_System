@@ -1,0 +1,17 @@
+# Project exclude paths
+/.gradle/
+/Simple Banking System/task/build/
+/Simple Banking System/task/out/
+/Simple Banking System/task/out/production/classes/
+/Topics/Command-line arguments/Basic calculator/out/
+/Topics/Command-line arguments/Basic calculator/out/production/classes/
+/Topics/Errors in programs/Fix compile-time errors/out/
+/Topics/Errors in programs/Fix compile-time errors/out/production/classes/
+/Topics/Errors in programs/Fix the program/out/
+/Topics/Errors in programs/Fix the program/out/production/classes/
+/Topics/Errors in programs/Print the age/out/
+/Topics/Errors in programs/Print the age/out/production/classes/
+/Topics/Errors in programs/What's wrong/out/
+/Topics/Errors in programs/What's wrong/out/production/classes/
+/Topics/Random/Generate random numbers/out/
+/Topics/Random/Generate random numbers/out/production/classes/

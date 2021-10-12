@@ -11,14 +11,14 @@ public class Account {
 
     public String getCardNumber() {
 
-
-        return "400000" + createNewRandom() + "4";
+        String accountNumberWithoutCheckDigit = "400000" + createNewRandom();
+        return accountNumberWithoutCheckDigit + generateCheckDigit(accountNumberWithoutCheckDigit);
 
     }
 
     public String getPin() {
 
-        int p = randy.nextInt(9999 - 1000) + 1000;
+        int p = randy.nextInt(9999);
 
         return String.format("%04d", p);
     }
@@ -52,5 +52,28 @@ public class Account {
                 '}';
     }
 
+    private static int generateCheckDigit(String number) {
+        int sum = 0;
+        int remainder = (number.length() + 1) % 2;
+        for (int i = 0; i < number.length(); i++) {
+
+            // Get the digit at the current position.
+            int digit = Integer.parseInt(number.substring(i, (i + 1)));
+
+            if ((i % 2) == remainder) {
+                digit = digit * 2;
+                if (digit > 9) {
+                    digit = (digit / 10) + (digit % 10);
+                }
+            }
+            sum += digit;
+        }
+
+        // The check digit is the number required to make the sum a multiple of 10
+        int mod = sum % 10;
+        int checkDigit = ((mod == 0) ? 0 : 10 - mod);
+
+        return checkDigit;
+    }
 
 }
